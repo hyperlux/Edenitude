@@ -1,149 +1,468 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edenitude - Thérapies Naturelles</title>
-<link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <img src="images/logo.png" alt="Edenitude Logo">
-    <nav>
-      <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#qui-sommes-nous">Qui Sommes-Nous</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <a href="#book" class="btn-primary">Book Now</a>
-  </header>
-<div class="hero">
-    <h1>Edenitude: Votre Chemin vers le Bien-Être</h1>
-    <p>Une approche naturelle et holistique de guérison</p>
-    <a href="#services" class="btn">Explorer les Services</a>
-  </div>
-  <div class="services" id="services">
-    <div class="service-card">
-      <img src="images/massagehuile.jpg" alt="Massages aux huiles">
-      <h3>Massages aux Huiles</h3>
-      <p>Thérapie manuelle apaisante et précise visant à libérer les capacités du corps. Travail des fascias et circulation énergétique.</p>
-      <a href="#book" class="btn">Réserver</a>
+  <head>
+    <title>Edenitude &mdash; Bien-être et Thérapies Naturelles</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/rangeslider.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+  <body>
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
     </div>
-    <div class="service-card">
-      <img src="images/massagethai.jpg" alt="Thai Massage">
-      <h3>Thai Massage</h3>
-      <p>Travail profond des sen lines pour rééquilibrer les flux énergétiques, sanguins et lymphatiques. Libère les blocages physiques.</p>
-      <a href="#book" class="btn">Réserver</a>
-    </div>
-    <div class="service-card">
-      <img src="images/reequilibrage.jpg" alt="Réequilibrage énergétique">
-      <h3>Réequilibrage Énergétique</h3>
-      <p>Soins énergétiques au cabinet ou à distance, rééquilibrant et traversant les mémoires transgénérationnelles.</p>
-      <a href="#book" class="btn">Réserver</a>
-    </div>
-    <div class="service-card">
-      <img src="images/massagepied.jpg" alt="Massage des pieds">
-      <h3>Massage des Pieds</h3>
-      <p>Libération subtile et profonde des pieds et des organes interconnectés. Nos massages ne sont ni thérapeutiques ni médicaux.</p>
-      <a href="#book" class="btn">Réserver</a>
-    </div>
-    <div class="service-card">
-      <img src="images/toksen.jpg" alt="Tok Sen">
-      <h3>Tok Sen</h3>
-      <p>Technique ancestrale Lanna, la vibration rythmique libère muscles, articulations et fascias.</p>
-      <a href="#book" class="btn">Réserver</a>
-    </div>
-    <div class="service-card">
-      <img src="images/hotherbals.jpg" alt="Hot Herbals">
-      <h3>Hot Herbals</h3>
-      <p>Traitements profonds des tissus avec herbes chaudes, redonnant amplitude de mouvement. Nos massages ne sont ni thérapeutiques ni médicaux.</p>
-      <a href="#book" class="btn">Réserver</a>
-    </div>
-    <div class="service-card">
-      <img src="images/amatarot.jpg" alt="Amatarot">
-      <h3>Amatarot</h3>
-      <p>Technique ancestrale agissant en profondeur sur tendons, muscles, fascias et libérant les tissus.</p>
-      <a href="#book" class="btn">Réserver</a>
-    </div>
-    <div class="service-card">
-      <img src="images/massageabdo.jpg" alt="Massage Abdominal">
-      <h3>Massage Abdominal - Wissin nuad tong boran</h3>
-      <p>Massage profond, détoxifiant et énergisant, équilibrant le système corporel et émotionnel.</p>
-      <a href="#book" class="btn">Réserver</a>
-    </div>
-  </div>
-  <section id="qui-sommes-nous" class="about">
-    <h2>Qui Sommes-Nous?</h2>
-    <p>Chloé, forte d'une expérience de 20 ans comme thérapeute et de plus de 20 ans de formation en médecines traditionnelles et alternatives, met à votre disposition tout son savoir-faire et sa passion pour décrypter au mieux vos besoins et vous offrir la plus belle des séances de détente et de relaxation. Michèle, thérapeute énergétique depuis plus de 10 ans, spécialisée dans les mémoires transgénérationnelles.</p>
-    <p>Une parenthèse pour être à l'écoute de votre corps et de votre cœur. Aujourd'hui, l'OMS reconnaît la diversité des pratiques de médecines traditionnelles, complémentaires et diverses dans la prévention et la santé. L'équipe d'Eden Itude vous propose une approche alternative, holistique et préventive. Chaque séance est personnalisée selon vos besoins du jour, en harmonie avec votre respiration et votre corps.</p>
-  </section>
-  <section id="contact">
-    <h2>Contact</h2>
-    <form action="#" method="post">
-      <div>
-        <label for="name">Nom</label>
-        <input type="text" id="name" name="name" placeholder="Nom" required>
+    
+    <header class="site-navbar" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center">
+          
+          <div class="col-11 col-xl-4">
+            <h1 class="mb-0 site-logo"><a href="index.html" class="text-white mb-0">Edenitude<span class="text-primary">.</span> </a></h1>
+          </div>
+          <div class="col-12 col-md-8 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li class="active"><a href="index.html"><span>Accueil</span></a></li>
+                <li class="has-children">
+                  <a href="services.html"><span>Nos Services</span></a>
+                  <ul class="dropdown arrow-top">
+                    <li><a href="#">Thérapie manuelle</a></li>
+                    <li><a href="#">Massages bien-être</a></li>
+                    <li><a href="#">Soins énergétiques</a></li>
+                    <li class="has-children">
+                      <a href="#">Autres</a>
+                      <ul class="dropdown">
+                        <li><a href="#">Thérapie manuelle</a></li>
+                        <li><a href="#">Massages bien-être</a></li>
+                        <li><a href="#">Soins énergétiques</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="about.html"><span>À propos</span></a></li>
+                <li><a href="blog.html"><span>Blog</span></a></li>
+                <li><a href="contact.html"><span>Contact</span></a></li>
+              </ul>
+            </nav>
+          </div>
+
+
+          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+
+          </div>
+
+        </div>
       </div>
-      <div>
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" placeholder="E-mail" required>
+      
+    </header>
+
+
+
+
+
+    <div class="site-blocks-cover overlay" style="background-image: url(images/girl-massage-relax.jpg);" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+
+          <div class="col-md-10">
+            
+            <div class="row justify-content-center mb-4">
+              <div class="col-md-10 text-center">
+                <h1 data-aos="fade-up" class="mb-5">Nous apportons des solutions à votre <span class="typed-words"></span></h1>
+
+                <p data-aos="fade-up" data-aos-delay="100"><a href="#" class="btn btn-primary btn-pill">Commencer</a></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
-      <div>
-        <label for="phone">Téléphone</label>
-        <input type="tel" id="phone" name="phone" placeholder="Téléphone" required>
-      </div>
-      <div>
-        <label for="address">Adresse</label>
-        <input type="text" id="address" name="address" placeholder="Adresse" required>
-      </div>
-      <div>
-        <label for="subject">Objet</label>
-        <input type="text" id="subject" name="subject" placeholder="Objet" required>
-      </div>
-      <div>
-        <label for="message">Votre message</label>
-        <textarea id="message" name="message" placeholder="Rédigez votre message ici..." rows="4" required></textarea>
-      </div>
-      <div>
-        <input type="submit" value="Envoyer" class="btn">
-      </div>
-    </form>
-    <p class="contact-info-text">Horaires : Du lundi au dimanche, 13h - 20h | Adresse : 134 domaine d'Alzone, 20166 Porticcio (Agosta Plage) | <a href="mailto:contact@edenitude.com">contact@edenitude.com</a> | Tél : +33 (0)6.84.98.36 | Sas Edenitude - 134 Domaine d'Alzone 20166 Miterracia-Siren : B129 967 974</p>
-    <p><a href="tarifs2025.pdf" class="btn btn-download">Télécharger les Tarifs</a></p>
-  </section>
-  <footer>
-    <div class="footer-content">
-      <div class="contact-info">
-        <h3>Contact Info</h3>
-        <p>Email: <a href="mailto:contact@edenitude.com">contact@edenitude.com</a></p>
-        <p>Phone: +33 (0)6.84.98.36</p>
-        <p>Address: 134 domaine d'Alzone, 20166 Porticcio (Agosta Plage)</p>
-      </div>
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#qui-sommes-nous">Qui Sommes-Nous</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="tarifs2025.pdf">Tarifs</a></li>
-        </ul>
-      </div>
-      <div class="social-media">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="#" class="social-icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"></a>
-          <a href="#" class="social-icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
-          <a href="#" class="social-icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitterx--v1.png" alt="Twitter"></a>
+    </div>  
+
+
+
+    <div class="block-quick-info-2">
+      <div class="container">
+        <div class="block-quick-info-2-inner">
+          <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-3 mb-3 mb-lg-0">
+              <div class="d-flex quick-info-2">
+                <span class="icon icon-home mr-3"></span>
+                <div class="text">
+                  <strong class="d-block heading">Visitez notre cabinet</strong>
+                  <span class="excerpt">2875, avenue de la sérénité</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 mb-3 mb-lg-0">
+              <div class="d-flex quick-info-2">
+                <span class="icon icon-phone mr-3"></span>
+                <div class="text">
+                  <strong class="d-block heading">Appelez-nous</strong>
+                  <span class="excerpt"><a href="#">+(123) 456 7890</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 mb-3 mb-lg-0">
+              <div class="d-flex quick-info-2">
+                <span class="icon icon-envelope mr-3"></span>
+                <div class="text">
+                  <strong class="d-block heading">Envoyez-nous un message</strong>
+                  <span class="excerpt"><a href="#">info@edenitude.com</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 mb-3 mb-lg-0">
+              <div class="d-flex quick-info-2">
+                <span class="icon icon-clock-o mr-3"></span>
+                <div class="text">
+                  <strong class="d-block heading">Horaires d'ouverture</strong>
+                  <span class="excerpt">Lun-Ven 9h - 19h</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Edenitude. All rights reserved.</p>
+
+    <div class="block-services-1 py-5">
+      <div class="container">
+        <div class="row">
+          <div class="mb-4 mb-lg-0 col-sm-6 col-md-6 col-lg-3">
+            <h3 class="mb-3">Ce que nous proposons</h3>
+            <p>Retrouvez l'harmonie du corps et de l'esprit grâce à nos soins personnalisés. Nous vous aidons à libérer vos tensions et à retrouver votre vitalité.</p>
+            <p><a href="#" class="d-inline-flex align-items-center block-service-1-more"><span>Voir tous les services</span> <span class="icon-keyboard_arrow_right icon"></span></a></p>
+          </div>
+          <div class="mb-4 mb-lg-0 col-sm-6 col-md-6 col-lg-3">
+            <div class="block-service-1-card">
+              <a href="#" class="thumbnail-link d-block mb-4"><img src="images/massagethai.jpg" alt="Image" class="img-fluid"></a>
+              <h3 class="block-service-1-heading mb-3"><a href="#">Thérapie manuelle</a></h3>
+              <div class="block-service-1-excerpt"><p>Des techniques douces pour soulager vos douleurs, améliorer votre mobilité et restaurer l'équilibre de votre corps.</p></div>
+              <p><a href="#" class="d-inline-flex align-items-center block-service-1-more"><span>En savoir plus</span> <span class="icon-keyboard_arrow_right icon"></span></a></p>
+            </div>
+          </div>
+          <div class="mb-4 mb-lg-0 col-sm-6 col-md-6 col-lg-3">
+            <div class="block-service-1-card">
+              <a href="#" class="thumbnail-link d-block mb-4"><img src="images/massagehuile.jpg" alt="Image" class="img-fluid"></a>
+              <h3 class="block-service-1-heading mb-3"><a href="#">Massages bien-être</a></h3>
+              <div class="block-service-1-excerpt"><p>Offrez-vous un moment de détente profonde avec nos massages relaxants, conçus pour apaiser le corps et l'esprit.</p></div>
+              <p><a href="#" class="d-inline-flex align-items-center block-service-1-more"><span>En savoir plus</span> <span class="icon-keyboard_arrow_right icon"></span></a></p>
+            </div>
+          </div>
+          <div class="mb-4 mb-lg-0 col-sm-6 col-md-6 col-lg-3">
+            <div class="block-service-1-card">
+              <a href="#" class="thumbnail-link d-block mb-4"><img src="images/amatarot.jpg" alt="Image" class="img-fluid"></a>
+              <h3 class="block-service-1-heading mb-3"><a href="#">Soins énergétiques</a></h3>
+              <div class="block-service-1-excerpt"><p>Harmonisez vos énergies vitales pour retrouver un bien-être global, réduire le stress et stimuler votre pouvoir d'autoguérison.</p></div>
+              <p><a href="#" class="d-inline-flex align-items-center block-service-1-more"><span>En savoir plus</span> <span class="icon-keyboard_arrow_right icon"></span></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </footer>
-</body>
+
+    <div class="block-half-content-1 d-block d-lg-flex mt-5">
+      <div class="block-half-content-img" style="background-image: url('images/girl-massage-relax.jpg')">
+        
+      </div>
+      <div class="block-half-content-text bg-primary">
+        <div class="block-half-content-text-inner">
+          <h2 class="block-half-content-heading mb-4">Pourquoi nous choisir ?</h2>
+          <div class="block-half-content-excerpt">
+          <p class="lead">Notre approche holistique et personnalisée vous garantit une expérience unique, centrée sur vos besoins pour un bien-être durable.</p>
+          </div>
+        </div>
+
+        <div class="block-counter-1 section-counter">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="counter">
+                <div class="number-wrap">
+                  <span class="block-counter-1-number" data-number="3">0</span><span class="append">K</span>
+                </div>
+                <span class="block-counter-1-caption">Clients Satisfaits</span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="counter">
+                <div class="number-wrap">
+                  <span class="block-counter-1-number" data-number="7">0</span><span class="append"></span>
+                </div>
+                <span class="block-counter-1-caption">Ans d'Expérience</span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="counter">
+                <div class="number-wrap">
+                  <span class="block-counter-1-number" data-number="100">0</span><span class="append">%</span>
+                </div>
+                <span class="block-counter-1-caption">Satisfaction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section bg-light">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-12 text-center">
+            <h2 class="site-section-heading text-center font-secondary">Nos Offres Spéciales</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="d-block d-lg-flex">
+          <div class="half-wrap d-block d-md-flex">
+            <div class="half bg-white d-block d-md-flex arrow-right">
+              <div class="text">
+                <h2>Thérapie manuelle</h2>
+                <p>Libérez vos tensions et retrouvez votre mobilité.</p>
+                <p><a href="course-details.html" class="btn btn-primary btn-sm btn-pill">En savoir plus</a></p>
+              </div>
+            </div>
+            <div class="half bg-img img" style="background-image: url('images/massagethai.jpg');"></div>
+          </div>
+          <div class="half-wrap d-block d-md-flex">
+            <div class="half bg-white d-block d-md-flex arrow-right">
+              <div class="text">
+                <h2>Massage Bien-être</h2>
+                <p>Un pur moment de relaxation pour évacuer le stress.</p>
+                <p><a href="course-details.html" class="btn btn-primary btn-sm btn-pill">En savoir plus</a></p>
+              </div>
+            </div>
+            <div class="half bg-img img" style="background-image: url('images/massagehuile.jpg');"></div>
+          </div>
+        </div>
+
+        <div class="d-block d-lg-flex">
+            <div class="half-wrap d-block d-md-flex">
+              <div class="half bg-white d-block d-md-flex arrow-left order-md-2">
+                <div class="text">
+                  <h2>Soins Énergétiques</h2>
+                  <p>Rééquilibrez vos énergies pour une vitalité retrouvée.</p>
+                  <p><a href="course-details.html" class="btn btn-primary btn-sm btn-pill">En savoir plus</a></p>
+                </div>
+              </div>
+              <div class="half bg-img img" style="background-image: url('images/amatarot.jpg');"></div>
+            </div>
+            <div class="half-wrap d-block d-md-flex">
+              <div class="half bg-white  d-block d-md-flex arrow-left order-md-2">
+                <div class="text">
+                  <h2>Herbes Chaudes</h2>
+                  <p>La chaleur apaisante des herbes pour une relaxation profonde.</p>
+                  <p><a href="course-details.html" class="btn btn-primary btn-sm btn-pill">En savoir plus</a></p>
+                </div>
+              </div>
+              <div class="half bg-img img" style="background-image: url('images/hotherbals.jpg');"></div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-12 text-center">
+            <h2 class="site-section-heading text-center font-secondary">Nos clients témoignent</h2>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-12">
+
+            <div class="owl-carousel-2 owl-carousel">
+
+              <div class="d-block block-testimony mx-auto text-center">
+                <div class="person w-25 mx-auto mb-4">
+                  <img src="images/person_1.jpg" alt="Image" class="img-fluid rounded-circle w-50 mx-auto">
+                </div>
+                <div>
+                  <h2 class="h5 mb-4">Sophie L.</h2>
+                  <blockquote>&ldquo;Une expérience incroyable ! Je me sens ressourcée et pleine d'énergie. Merci Edenitude !&rdquo;</blockquote>
+                </div>
+              </div>
+
+              <div class="d-block block-testimony mx-auto text-center">
+                <div class="person w-25 mx-auto mb-4">
+                  <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded-circle w-50 mx-auto">
+                </div>
+                <div>
+                  <h2 class="h5 mb-4">Julien M.</h2>
+                  <blockquote>&ldquo;J'ai enfin trouvé un soulagement durable à mes douleurs. Une équipe très à l'écoute et professionnelle.&rdquo;</blockquote>
+                </div>
+              </div>
+
+              <div class="d-block block-testimony mx-auto text-center">
+                <div class="person w-25 mx-auto mb-4">
+                  <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded-circle w-50 mx-auto">
+                </div>
+                <div>
+                  <h2 class="h5 mb-4">Carine D.</h2>
+                  <blockquote>&ldquo;Un havre de paix. Les massages sont divins et l'atmosphère est très apaisante. Je recommande vivement.&rdquo;</blockquote>
+                </div>
+              </div>
+
+              <div class="d-block block-testimony mx-auto text-center">
+                <div class="person w-25 mx-auto mb-4">
+                  <img src="images/person_4.jpg" alt="Image" class="img-fluid rounded-circle w-50 mx-auto">
+                </div>
+                <div>
+                  <h2 class="h5 mb-4">Marc A.</h2>
+                  <blockquote>&ldquo;Les soins énergétiques m'ont aidé à traverser une période de stress intense. Une vraie révélation.&rdquo;</blockquote>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5 block-cta-1 primary-overlay" style="background-image: url('images/hero_bg_2.jpg')">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-lg-7 mb-4 mb-lg-0">
+            <h2 class="mb-3 mt-0 text-white">Jusqu'à 30% de réduction pour les nouveaux clients</h2>
+            <p class="mb-0 text-white lead">Découvrez nos offres de bienvenue et commencez votre voyage vers le bien-être avec Edenitude.</p>
+          </div>
+          <div class="col-lg-4">
+            <p class="mb-0"><a href="contact.html" class="btn btn-outline-white text-white btn-md btn-pill px-5 font-weight-bold btn-block">Nous contacter</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-6 mb-5 mb-lg-0 col-lg-3">
+                <h2 class="footer-heading mb-4">Liens Rapides</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#">À propos</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Témoignages</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 mb-5 mb-lg-0 col-lg-3">
+                <h2 class="footer-heading mb-4">Nos Soins</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#">Thérapie manuelle</a></li>
+                  <li><a href="#">Massages bien-être</a></li>
+                  <li><a href="#">Soins énergétiques</a></li>
+                  <li><a href="#">Autres</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 mb-5 mb-lg-0 col-lg-3">
+                <h2 class="footer-heading mb-4">Edenitude</h2>
+                <ul class="list-unstyled">
+                   <li><a href="#">Notre Vision</a></li>
+                  <li><a href="#">L'équipe</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 mb-5 mb-lg-0 col-lg-3">
+                <h2 class="footer-heading mb-4">Suivez-nous</h2>
+                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <h2 class="footer-heading mb-4">S'inscrire à la newsletter</h2>
+            <p>Recevez nos conseils bien-être et nos offres exclusives directement dans votre boîte mail.</p>
+            <form action="#" method="post" class="subscription">
+              <div class="input-group mb-3  d-flex align-items-stretch">
+                <input type="text" class="form-control bg-transparent" placeholder="Entrez votre email" aria-label="Entrez votre email" aria-describedby="button-addon2">
+                <button class="btn btn-primary text-white" type="button" id="button-addon2">Envoyer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5">
+          <div class="col-12 text-md-center text-left">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/rangeslider.min.js"></script>
+  
+
+  <script src="js/typed.js"></script>
+            <script>
+            var typed = new Typed('.typed-words', {
+            strings: ["douleur"," stress"," fatigue"],
+            typeSpeed: 80,
+            backSpeed: 80,
+            backDelay: 4000,
+            startDelay: 1000,
+            loop: true,
+            showCursor: true
+            });
+            </script>
+
+  <script src="js/main.js"></script>
+  
+  </body>
 </html>
