@@ -876,8 +876,8 @@ h1, h2, h3, h4, h5,
 }
 
 .site-blocks-cover, .site-blocks-cover > .container > .row {
-  min-height: 600px;
-  height: calc(100vh);
+  min-height: 400px;
+  height: 70vh;
 }
 
 .site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover > .container > .row {
@@ -2696,6 +2696,7 @@ h1, h2, h3, h4, h5,
 }
 
 .block-services-1 .block-service-1-card .thumbnail-link img {
+  border-radius: 10px;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -2852,4 +2853,32 @@ h1, h2, h3, h4, h5,
 
 .site-navbar .site-navigation .site-menu > li > a {
   color: #000000 !important;
+}
+/* Services Section */
+.ftco-services {
+    overflow: hidden; /* Hide overflowing content during animation */
+}
+
+.ftco-services .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ftco-services .col-md-4 {
+    flex: 0 0 auto; /* Prevent shrinking and allow content to define width */
+    width: 33.33%; /* Explicitly set width to ensure 3 items per row */
+    margin-right: 0; /* Remove margin */
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.1);
+    display: inline-block; /* For older browser compatibility with white-space: nowrap */
+}
+
+@keyframes scroll-services {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } /* Animate across the width of one set of duplicated content */
+}
+.ftco-services {
+    margin-bottom: 50px; /* Adjust as needed for desired spacing */
 }

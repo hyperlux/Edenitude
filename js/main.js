@@ -3,6 +3,7 @@
  	easing: 'slide',
  	once: true
  });
+ console.log("AOS initialized!");
 
 jQuery(document).ready(function($) {
 
