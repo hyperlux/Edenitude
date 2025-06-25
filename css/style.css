@@ -4,6 +4,7 @@ body {
   color: #4d4d4d;
   font-weight: 300;
   font-size: 1rem;
+  background-color: #F5F5DC; /* Set body background to match hero section */
 }
 
 ::-moz-selection {
@@ -218,7 +219,7 @@ h1, h2, h3, h4, h5,
 
 .site-footer {
   padding: 4em 0;
-  background: #fff;
+  background: #F5F5DC; /* Changed background to match hero section */
 }
 
 @media (min-width: 768px) {
@@ -2632,6 +2633,8 @@ h1, h2, h3, h4, h5,
 
 .block-quick-info-2 {
   padding: 2rem 0;
+  background: #F5F5DC; /* Changed background to match hero section */
+  margin-top: 5em; /* Added to create space between sections */
 }
 
 .block-quick-info-2 .block-quick-info-2-inner {
