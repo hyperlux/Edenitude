@@ -2816,3 +2816,40 @@ h1, h2, h3, h4, h5,
 }
 
 /*# sourceMappingURL=style.css.map */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: #000; /* Ensure text is black */
+  text-align: left;
+}
+
+.hero-text h2 {
+  font-size: 3rem; /* Adjust font size as needed */
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 991.98px) {
+  .hero-text {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+}
+/* Custom rules for black text */
+.site-navbar .site-logo a {
+  color: #000000 !important;
+}
+
+.site-navbar .site-navigation .site-menu > li > a {
+  color: #000000 !important;
+}
