@@ -2730,6 +2730,7 @@ h1, h2, h3, h4, h5,
 
 .block-half-content-1 .block-half-content-img {
   background-size: cover;
+  border-radius: 10px;
   background-position: center;
   width: 50%;
 }
@@ -2881,4 +2882,12 @@ h1, h2, h3, h4, h5,
 }
 .ftco-services {
     margin-bottom: 50px; /* Adjust as needed for desired spacing */
+}
+/* Custom additions for border-radius */
+.media-body img,
+.half.bg-img.img {
+  border-radius: 10px;
+}
+.ftco-section.ftco-services {
+    background-color: rgb(245, 245, 220);
 }
