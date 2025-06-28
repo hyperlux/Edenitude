@@ -312,4 +312,17 @@ jQuery(document).ready(function($) {
 
 	
 
+	// Scroll-based movement for lotus-scroll-svg
+	var lotusSvg = document.getElementById('lotus-scroll-svg');
+	if (lotusSvg) {
+		var initialBottom = parseInt(window.getComputedStyle(lotusSvg).bottom); // Get initial bottom value from CSS
+
+		window.addEventListener('scroll', function() {
+			var scrollY = window.scrollY;
+			// Calculate new bottom position: initialBottom + scrollY
+			// Adjust the multiplier (e.g., 0.5) to control movement speed relative to scroll
+			var newBottom = initialBottom + scrollY * 0.5;
+			lotusSvg.style.bottom = newBottom + 'px';
+		});
+	}
 });

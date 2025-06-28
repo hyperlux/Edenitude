@@ -4,7 +4,27 @@ body {
   color: #4d4d4d;
   font-weight: 300;
   font-size: 1rem;
-  background-color: #F5F5DC; /* Set body background to match hero section */
+  background-color: beige;
+}
+
+.lotus-img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1; /* Ensure it's above the background */
+  max-width: 300px; /* Adjust size as needed */
+  height: auto;
+}
+
+#lotus-scroll-svg {
+  position: fixed;
+  bottom: 20px; /* Adjust initial vertical position as needed */
+  right: 20px; /* Keep it on the right side */
+  transition: bottom 0.3s ease-out; /* Add transition for smooth movement */
+  /* Override or adjust other properties from .lotus-img if necessary */
+  /* For example, if translateY(-50%) from .lotus-img causes issues: */
+  /* transform: none; */
 }
 
 ::-moz-selection {
@@ -219,7 +239,7 @@ h1, h2, h3, h4, h5,
 
 .site-footer {
   padding: 4em 0;
-  background: #F5F5DC; /* Changed background to match hero section */
+  background: transparent; /* Changed background to match hero section */
 }
 
 @media (min-width: 768px) {
@@ -323,7 +343,7 @@ h1, h2, h3, h4, h5,
   bottom: 0;
   z-index: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: transparent;
 }
 
 .bg-image > .container {
@@ -854,6 +874,7 @@ h1, h2, h3, h4, h5,
   background-repeat: no-repeat;
   background-position: top;
   background-position: center center;
+  background-color: beige;
 }
 
 .site-blocks-cover.overlay {
@@ -868,6 +889,7 @@ h1, h2, h3, h4, h5,
   right: 0;
   top: 0;
   background: none;
+  background-color: transparent !important; /* Ensure no blue overlay */
 }
 
 .site-blocks-cover .player {
@@ -997,7 +1019,9 @@ h1, h2, h3, h4, h5,
   opacity: 0;
   visibility: hidden;
   -webkit-transition: .3s all ease;
-  -o-transition: .3s all ease;
+.row.owl-carousel {
+  background-color: transparent !important;
+}
   transition: .3s all ease;
 }
 
@@ -2861,6 +2885,7 @@ h1, h2, h3, h4, h5,
 /* Services Section */
 .ftco-services {
     overflow: hidden; /* Hide overflowing content during animation */
+    background-color: transparent !important; /* Ensure no blue overlay */
 }
 
 .ftco-services .container {
@@ -2872,7 +2897,7 @@ h1, h2, h3, h4, h5,
     flex: 0 0 auto; /* Prevent shrinking and allow content to define width */
     width: 33.33%; /* Explicitly set width to ensure 3 items per row */
     margin-right: 0; /* Remove margin */
-    background: #fff;
+    background: transparent;
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.1);
@@ -2892,5 +2917,8 @@ h1, h2, h3, h4, h5,
   border-radius: 10px;
 }
 .ftco-section.ftco-services {
-    background-color: rgb(245, 245, 220);
+    background-color: transparent;
+}
+.ftco-section.ftco-services .owl-item .text-center {
+    background-color: transparent !important;
 }
