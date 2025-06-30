@@ -72,11 +72,13 @@ jQuery(document).ready(function($) {
 			if ( $('body').hasClass('offcanvas-menu') ) {
 				$('body').removeClass('offcanvas-menu');
 				$this.removeClass('active');
+				$this.attr('aria-expanded', 'false');
 			} else {
 				$('body').addClass('offcanvas-menu');
 				$this.addClass('active');
+				$this.attr('aria-expanded', 'true');
 			}
-		}) 
+		})
 
 		// click outisde offcanvas
 		$(document).mouseup(function(e) {
@@ -91,37 +93,8 @@ jQuery(document).ready(function($) {
 	siteMenuClone();
 
 
-	var sitePlusMinus = function() {
-		$('.js-btn-minus').on('click', function(e){
-			e.preventDefault();
-			if ( $(this).closest('.input-group').find('.form-control').val() != 0  ) {
-				$(this).closest('.input-group').find('.form-control').val(parseInt($(this).closest('.input-group').find('.form-control').val()) - 1);
-			} else {
-				$(this).closest('.input-group').find('.form-control').val(parseInt(0));
-			}
-		});
-		$('.js-btn-plus').on('click', function(e){
-			e.preventDefault();
-			$(this).closest('.input-group').find('.form-control').val(parseInt($(this).closest('.input-group').find('.form-control').val()) + 1);
-		});
-	};
-	// sitePlusMinus();
 
 
-	var siteSliderRange = function() {
-    $( "#slider-range" ).slider({
-      range: true,
-      min: 0,
-      max: 500,
-      values: [ 75, 300 ],
-      slide: function( event, ui ) {
-        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-      }
-    });
-    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-	};
-	// siteSliderRange();
 
 
 	var siteMagnificPopup = function() {
@@ -245,84 +218,236 @@ jQuery(document).ready(function($) {
 	};
 	siteStellar();
 
-	var siteCountDown = function() {
-
-		$('#date-countdown').countdown('2020/10/10', function(event) {
-		  var $this = $(this).html(event.strftime(''
-		    + '<span class="countdown-block"><span class="label">%w</span> weeks </span>'
-		    + '<span class="countdown-block"><span class="label">%d</span> days </span>'
-		    + '<span class="countdown-block"><span class="label">%H</span> hr </span>'
-		    + '<span class="countdown-block"><span class="label">%M</span> min </span>'
-		    + '<span class="countdown-block"><span class="label">%S</span> sec</span>'));
-		});
-				
-	};
-	siteCountDown();
-
-	var siteDatePicker = function() {
-
-		if ( $('.datepicker').length > 0 ) {
-			$('.datepicker').datepicker();
-		}
-
-	};
-	siteDatePicker();
-
-	var siteRangeSlider = function() {
-
-		$('input[type="range"]').rangeslider({
-	    polyfill : false,
-	    onInit : function() {
-	        this.output = $( '<div class="range-output" />' ).insertAfter( this.$range ).html( this.$element.val() );
-	    },
-	    onSlide : function( position, value ) {
-	        this.output.html( value );
-	    }
-		});
-
-	};
-	siteRangeSlider();
 
 
-	var counter = function() {
-		
-		$('.section-counter').waypoint( function( direction ) {
 
-			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
 
-				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-				$('.block-counter-1-number').each(function(){
-					var $this = $(this),
-						num = $this.data('number');
-						console.log(num);
-					$this.animateNumber(
-					  {
-					    number: num,
-					    numberStep: comma_separator_number_step
-					  }, 7000
-					);
-				});
-				
-			}
-
-		} , { offset: '95%' } );
-
-	}
-	counter();
 
 	
 
-	// Scroll-based movement for lotus-scroll-svg
-	var lotusSvg = document.getElementById('lotus-scroll-svg');
-	if (lotusSvg) {
-		var initialBottom = parseInt(window.getComputedStyle(lotusSvg).bottom); // Get initial bottom value from CSS
 
-		window.addEventListener('scroll', function() {
-			var scrollY = window.scrollY;
-			// Calculate new bottom position: initialBottom + scrollY
-			// Adjust the multiplier (e.g., 0.5) to control movement speed relative to scroll
-			var newBottom = initialBottom + scrollY * 0.5;
-			lotusSvg.style.bottom = newBottom + 'px';
+	// ================================
+	// ENHANCED UX IMPROVEMENTS
+	// ================================
+
+
+	// Contact Form Validation and Handling
+	var contactForm = function() {
+		const form = document.getElementById('contactForm');
+		if (!form) return;
+
+		const nameField = document.getElementById('contactName');
+		const emailField = document.getElementById('contactEmail');
+		const phoneField = document.getElementById('contactPhone');
+		const serviceField = document.getElementById('contactService');
+		const messageField = document.getElementById('contactMessage');
+		const submitBtn = form.querySelector('button[type="submit"]');
+
+		// Email validation regex
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		// Phone validation regex (French format)
+		const phoneRegex = /^(?:(?:\+33|0)[1-9](?:[0-9]{8}))$/;
+
+		// Real-time validation functions
+		function validateField(field, isValid, errorMessage = '') {
+			const errorDiv = field.nextElementSibling;
+			
+			if (isValid) {
+				field.classList.remove('is-invalid');
+				field.classList.add('is-valid');
+				if (errorDiv && errorDiv.classList.contains('invalid-feedback')) {
+					errorDiv.style.display = 'none';
+				}
+			} else {
+				field.classList.remove('is-valid');
+				field.classList.add('is-invalid');
+				if (errorDiv && errorDiv.classList.contains('invalid-feedback')) {
+					errorDiv.textContent = errorMessage;
+					errorDiv.style.display = 'block';
+				}
+			}
+		}
+
+		function validateName() {
+			const value = nameField.value.trim();
+			const isValid = value.length >= 2;
+			validateField(nameField, isValid, 'Veuillez entrer un nom d\'au moins 2 caractères.');
+			return isValid;
+		}
+
+		function validateEmail() {
+			const value = emailField.value.trim();
+			const isValid = emailRegex.test(value);
+			validateField(emailField, isValid, 'Veuillez entrer une adresse email valide.');
+			return isValid;
+		}
+
+		function validatePhone() {
+			const value = phoneField.value.trim();
+			// Phone is optional, so empty is valid
+			if (value === '') {
+				phoneField.classList.remove('is-invalid', 'is-valid');
+				return true;
+			}
+			const isValid = phoneRegex.test(value.replace(/[\s\-\.]/g, ''));
+			validateField(phoneField, isValid, 'Veuillez entrer un numéro de téléphone français valide.');
+			return isValid;
+		}
+
+		function validateMessage() {
+			const value = messageField.value.trim();
+			const isValid = value.length >= 10;
+			validateField(messageField, isValid, 'Veuillez entrer un message d\'au moins 10 caractères.');
+			return isValid;
+		}
+
+		// Add event listeners for real-time validation
+		nameField.addEventListener('blur', validateName);
+		nameField.addEventListener('input', function() {
+			if (this.classList.contains('is-invalid')) {
+				validateName();
+			}
 		});
-	}
+
+		emailField.addEventListener('blur', validateEmail);
+		emailField.addEventListener('input', function() {
+			if (this.classList.contains('is-invalid')) {
+				validateEmail();
+			}
+		});
+
+		phoneField.addEventListener('blur', validatePhone);
+		phoneField.addEventListener('input', function() {
+			if (this.classList.contains('is-invalid')) {
+				validatePhone();
+			}
+		});
+
+		messageField.addEventListener('blur', validateMessage);
+		messageField.addEventListener('input', function() {
+			if (this.classList.contains('is-invalid')) {
+				validateMessage();
+			}
+		});
+
+		// Form submission handling
+		form.addEventListener('submit', function(e) {
+			e.preventDefault();
+
+			// Validate all fields
+			const isNameValid = validateName();
+			const isEmailValid = validateEmail();
+			const isPhoneValid = validatePhone();
+			const isMessageValid = validateMessage();
+
+			const isFormValid = isNameValid && isEmailValid && isPhoneValid && isMessageValid;
+
+			if (!isFormValid) {
+				// Focus on first invalid field
+				const firstInvalid = form.querySelector('.is-invalid');
+				if (firstInvalid) {
+					firstInvalid.focus();
+				}
+				return;
+			}
+
+			// Show loading state
+			const btnText = submitBtn.querySelector('.btn-text');
+			const btnLoading = submitBtn.querySelector('.btn-loading');
+			
+			submitBtn.disabled = true;
+			btnText.classList.add('d-none');
+			btnLoading.classList.remove('d-none');
+
+			// Prepare mailto data
+			const formData = {
+				name: nameField.value.trim(),
+				email: emailField.value.trim(),
+				phone: phoneField.value.trim() || 'Non renseigné',
+				service: serviceField.options[serviceField.selectedIndex].text || 'Non spécifié',
+				message: messageField.value.trim()
+			};
+
+			// Create mailto link
+			const subject = `Nouvelle demande de contact - ${formData.name}`;
+			const body = `Bonjour,
+
+Vous avez reçu une nouvelle demande de contact via le site Edenitude :
+
+Nom : ${formData.name}
+Email : ${formData.email}
+Téléphone : ${formData.phone}
+Service d'intérêt : ${formData.service}
+
+Message :
+${formData.message}
+
+---
+Ce message a été envoyé depuis le formulaire de contact du site Edenitude.`;
+
+			const mailtoLink = `mailto:info@edenitude.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+			// Open mailto link
+			window.location.href = mailtoLink;
+
+			// Simulate successful submission after a delay
+			setTimeout(function() {
+				// Reset loading state
+				submitBtn.disabled = false;
+				btnText.classList.remove('d-none');
+				btnLoading.classList.add('d-none');
+
+				// Show success message
+				const successMessage = form.querySelector('.form-success-message');
+				if (successMessage) {
+					successMessage.classList.remove('d-none');
+					
+					// Reset form
+					form.reset();
+					
+					// Remove validation classes
+					const validatedFields = form.querySelectorAll('.is-valid, .is-invalid');
+					validatedFields.forEach(field => {
+						field.classList.remove('is-valid', 'is-invalid');
+					});
+
+					// Hide success message after 5 seconds
+					setTimeout(function() {
+						successMessage.classList.add('d-none');
+					}, 5000);
+				}
+
+				// Scroll to success message
+				successMessage.scrollIntoView({ behavior: 'smooth' });
+			}, 2000);
+		});
+	};
+	contactForm();
+
+	// Smooth scrolling for anchor links
+	var smoothScrolling = function() {
+		$('a[href^="#"]').on('click', function(event) {
+			var target = $($(this).attr('href'));
+			if (target.length) {
+				event.preventDefault();
+				$('html, body').animate({
+					scrollTop: target.offset().top - 100
+				}, 800);
+			}
+		});
+	};
+	smoothScrolling();
+
+	// Enhanced service item interactions
+	var serviceInteractions = function() {
+		$('.service-item').hover(
+			function() {
+				$(this).find('.btn').addClass('btn-primary').removeClass('btn-outline-primary');
+			},
+			function() {
+				$(this).find('.btn').removeClass('btn-primary').addClass('btn-outline-primary');
+			}
+		);
+	};
+	serviceInteractions();
 });
