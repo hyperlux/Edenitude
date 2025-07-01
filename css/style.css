@@ -2644,3 +2644,12 @@ h1, h2, h3, h4, h5,
     margin-left: 0;
     margin-right: 0;
 }
+/* Styling for the "Voir nos services" button */
+.btn-booking-cta span {
+    margin-right: 5px; /* Space between text and arrow */
+}
+
+.btn-booking-cta i {
+    vertical-align: middle; /* Align arrow vertically with text */
+    font-size: 1.2em; /* Make arrow slightly larger */
+}
