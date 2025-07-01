@@ -383,8 +383,8 @@ h1, h2, h3, h4, h5,
   color: #fff;
   font-weight: 600;
   letter-spacing: 0.5px;
-  padding: 15px 35px;
-  font-size: 1.1rem;
+  padding: 10px 25px; /* Made smaller */
+  font-size: 0.9rem; /* Made smaller */
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
   border-radius: 25px;
