@@ -117,11 +117,14 @@
           <div class="row align-items-center justify-content-center text-center">
 
             <div class="col-md-8 text-center">
-              <img src="images/logo.png" alt="Image décorative" class="img-fluid mb-4 mt-5" loading="lazy">
+              <img src="images/logo.png" alt="Logo Edenitude" class="img-fluid mb-4 mt-5 hero-logo" loading="lazy">
               <div class="hero-text">
-                <h1 class="text-black fs-1">La voie vers votre bien-être</h1>
-                <p class="lead text-black mb-4">Thérapies alternatives & préventives</p>
-                <a href="#services" class="btn btn-primary btn-booking-cta" aria-label="Voir nos services"><span>Voir nos services</span> <i class="icon-arrow-down"></i></a>
+                <h1 class="text-black hero-title">La voie vers votre bien-être</h1>
+                <p class="lead text-black mb-5 hero-subtitle">Thérapies alternatives & préventives</p>
+                <a href="#services" class="btn btn-primary btn-booking-cta hero-cta" aria-label="Voir nos services">
+                  <span>Voir nos services</span>
+                  <i class="icon-arrow-down hero-arrow" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -129,7 +132,7 @@
       </div>
     </main>
 
-    <section class="ftco-section ftco-services services-full-width" id="services" style="margin-top: 300px;">
+    <section class="ftco-section ftco-services services-full-width" id="services" style="margin-top: 200px;">
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-8 text-center">
@@ -137,11 +140,11 @@
                     <p class="lead">Découvrez notre gamme complète de thérapies holistiques</p>
                 </div>
             </div>
-            <div class="row owl-carousel owl-theme" role="region" aria-label="Carrousel des services" aria-live="polite">
-                <!-- Service 1: Thaï massage -->
-                <div class="text-center service-item">
-                    <div class="media-body">
-                        <img src="images/massagethai.jpg" alt="Thaï massage - Travail profond des muscles et des fascias pour rééquilibrer les flux énergétiques, sanguins et lymphatiques. Libère les blocages physiques et redonne au corps son amplitude de mouvement." class="img-fluid mb-4" loading="lazy">
+            <div class="services-grid" role="region" aria-label="Grille des services">
+                <!-- Grid Row 1: Thai Massage, Decorative Image 1, Massage aux huiles -->
+                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-content">
+                        <img src="images/massagethai.jpg" alt="Thaï massage - Des techniques douces pour soulager vos douleurs" class="img-fluid mb-4" loading="lazy">
                         <h3 class="heading">Thaï massage</h3>
                         <div class="service-price text-primary mb-2">À partir de €65</div>
                         <p>Des techniques douces pour soulager vos douleurs, améliorer votre mobilité et restaurer l'équilibre de votre corps.</p>
@@ -151,26 +154,35 @@
                         <a href="mailto:info@edenitude.com?subject=Rendez-vous Thaï massage&body=Bonjour, je souhaiterais prendre rendez-vous pour une séance de Thaï massage. Merci de me contacter." class="btn btn-outline-primary btn-sm" aria-label="Réserver Thaï massage">Réserver</a>
                     </div>
                 </div>
-                
-                <!-- Service 2: Massages aux huiles -->
-                <div class="text-center service-item">
-                    <div class="media-body">
+
+                <div class="grid-item decorative-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="decorative-content">
+                        <img src="images/selected/1.png" alt="Élément décoratif" class="decorative-image floating" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-content">
                         <img src="images/massagehuile.jpg" alt="Massage aux huiles thérapeutiques - relaxation profonde et travail des fascias" class="img-fluid mb-4" loading="lazy">
                         <h3 class="heading">Massages aux huiles</h3>
                         <div class="service-price text-primary mb-2">À partir de €70</div>
-                        <p>Thérapie manuelle puissante et précise visant à libérer les capacités du corps.
-
-Travail profond des muscles et des facias.</p>
+                        <p>Thérapie manuelle puissante et précise visant à libérer les capacités du corps. Travail profond des muscles et des fascias.</p>
                         <div class="service-benefits mb-3">
                             <small class="text-muted">✓ Relaxation profonde ✓ Libération des tensions ✓ Travail des fascias</small>
                         </div>
                         <a href="mailto:info@edenitude.com?subject=Rendez-vous Massages aux huiles&body=Bonjour, je souhaiterais prendre rendez-vous pour un massage aux huiles. Merci de me contacter." class="btn btn-outline-primary btn-sm" aria-label="Réserver Massage aux huiles">Réserver</a>
                     </div>
                 </div>
-                
-                <!-- Service 3: Soins énergétiques -->
-                <div class="text-center service-item">
-                    <div class="media-body">
+
+                <!-- Grid Row 2: Decorative Image 2, Soins énergétiques, Massage des pieds -->
+                <div class="grid-item decorative-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="decorative-content">
+                        <img src="images/selected/2.png" alt="Élément décoratif" class="decorative-image floating" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-content">
                         <img src="images/reequilibrage.jpg" alt="Soins énergétiques et rééquilibrage - harmonisation des énergies vitales pour le bien-être global" class="img-fluid mb-4" loading="lazy">
                         <h3 class="heading">Soins énergétiques</h3>
                         <div class="service-price text-primary mb-2">À partir de €75</div>
@@ -181,10 +193,9 @@ Travail profond des muscles et des facias.</p>
                         <a href="mailto:info@edenitude.com?subject=Rendez-vous Soins énergétiques&body=Bonjour, je souhaiterais prendre rendez-vous pour un soin énergétique. Merci de me contacter." class="btn btn-outline-primary btn-sm" aria-label="Réserver Soin énergétique">Réserver</a>
                     </div>
                 </div>
-                
-                <!-- Service 4: Massage des pieds -->
-                <div class="text-center service-item">
-                    <div class="media-body">
+
+                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-content">
                         <img src="images/foot_massage.jpg" alt="Massage des pieds thérapeutique - libération subtile et amélioration de la circulation" class="img-fluid mb-4" loading="lazy">
                         <h3 class="heading">Massage des pieds</h3>
                         <div class="service-price text-primary mb-2">À partir de €60</div>
@@ -195,10 +206,10 @@ Travail profond des muscles et des facias.</p>
                         <a href="mailto:info@edenitude.com?subject=Rendez-vous Massage des pieds&body=Bonjour, je souhaiterais prendre rendez-vous pour un massage des pieds. Merci de me contacter." class="btn btn-outline-primary btn-sm" aria-label="Réserver Massage des pieds">Réserver</a>
                     </div>
                 </div>
-                
-                <!-- Service 5: Tok Sen -->
-                <div class="text-center service-item">
-                    <div class="media-body">
+
+                <!-- Grid Row 3: Tok Sen, Decorative Image 7, Hot herbals -->
+                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="service-content">
                         <img src="images/toksen.jpg" alt="Tok Sen - technique ancestrale Lanna avec vibrations rythmiques pour libérer muscles et articulations" class="img-fluid mb-4" loading="lazy">
                         <h3 class="heading">Tok Sen</h3>
                         <div class="service-price text-primary mb-2">À partir de €80</div>
@@ -209,10 +220,15 @@ Travail profond des muscles et des facias.</p>
                         <a href="mailto:info@edenitude.com?subject=Rendez-vous Tok Sen&body=Bonjour, je souhaiterais prendre rendez-vous pour une séance de Tok Sen. Merci de me contacter." class="btn btn-outline-primary btn-sm" aria-label="Réserver Tok Sen">Réserver</a>
                     </div>
                 </div>
-                
-                <!-- Service 6: Hot herbals -->
-                <div class="text-center service-item">
-                    <div class="media-body">
+
+                <div class="grid-item decorative-item" data-aos="fade-up" data-aos-delay="800">
+                    <div class="decorative-content">
+                        <img src="images/selected/7.png" alt="Élément décoratif" class="decorative-image floating" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="900">
+                    <div class="service-content">
                         <img src="images/hotherbals.jpg" alt="Hot herbals - travail profond des sen lines pour rééquilibrer les flux énergétiques et sanguins" class="img-fluid mb-4" loading="lazy">
                         <h3 class="heading">Hot herbals</h3>
                         <div class="service-price text-primary mb-2">À partir de €85</div>
@@ -223,10 +239,16 @@ Travail profond des muscles et des facias.</p>
                         <a href="mailto:info@edenitude.com?subject=Rendez-vous Hot herbals&body=Bonjour, je souhaiterais prendre rendez-vous pour une séance Hot herbals. Merci de me contacter." class="btn btn-outline-primary btn-sm" aria-label="Réserver Hot herbals">Réserver</a>
                     </div>
                 </div>
-                
-                <!-- Service 7: Amatarot -->
-                <div class="text-center service-item">
-                    <div class="media-body">
+
+                <!-- Grid Row 4: Decorative Body SVG, Amatarot, Massage Abdominal -->
+                <div class="grid-item decorative-item" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="decorative-content">
+                        <img src="images/selected/body.svg" alt="Silhouette corporelle décorative" class="decorative-image floating" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="1100">
+                    <div class="service-content">
                         <img src="images/amatarot.jpg" alt="Amatarot - technique ancestrale de médecine traditionnelle pour régénération des tissus et libération nerveuse" class="img-fluid mb-4" loading="lazy">
                         <h3 class="heading">Amatarot</h3>
                         <div class="service-price text-primary mb-2">À partir de €90</div>
@@ -237,10 +259,9 @@ Travail profond des muscles et des facias.</p>
                         <a href="mailto:info@edenitude.com?subject=Rendez-vous Amatarot&body=Bonjour, je souhaiterais prendre rendez-vous pour une séance d'Amatarot. Merci de me contacter." class="btn btn-outline-primary btn-sm" aria-label="Réserver Amatarot">Réserver</a>
                     </div>
                 </div>
-                
-                <!-- Service 8: Massage Abdominal -->
-                <div class="text-center service-item">
-                    <div class="media-body">
+
+                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="service-content">
                         <img src="images/massageabdo.jpg" alt="Massage Abdominal Wissin nuad tong boran - massage détoxifiant et énergisant pour équilibrer le système corporel" class="img-fluid mb-4" loading="lazy">
                         <h3 class="heading">Massage Abdominal</h3>
                         <div class="service-price text-primary mb-2">À partir de €95</div>
@@ -249,19 +270,6 @@ Travail profond des muscles et des facias.</p>
                             <small class="text-muted">✓ Détoxification ✓ Équilibre émotionnel ✓ Régénération système digestif</small>
                         </div>
                         <a href="mailto:info@edenitude.com?subject=Rendez-vous Massage Abdominal&body=Bonjour, je souhaiterais prendre rendez-vous pour un massage abdominal. Merci de me contacter." class="btn btn-outline-primary btn-sm" aria-label="Réserver Massage Abdominal">Réserver</a>
-                    </div>
-                </div>
-                <!-- Service 9: Thai Massage -->
-                <div class="text-center service-item">
-                    <div class="media-body">
-                        <img src="images/massagethai.jpg" alt="Séance de massage thaï - techniques profondes pour rééquilibrer les énergies et améliorer la mobilité" class="img-fluid mb-4" loading="lazy">
-                        <h3 class="heading">Massage Thaï</h3>
-                        <div class="service-price text-primary mb-2">À partir de €80</div>
-                        <p>Travail profond des sen lines pour rééquilibrer les flux énergétiques, sanguins et lymphatiques. Libère les blocages physiques et redonne au corps son amplitude de mouvement.</p>
-                        <div class="service-benefits mb-3">
-                            <small class="text-muted">✓ Rééquilibrage énergétique ✓ Libération blocages ✓ Amélioration mobilité</small>
-                        </div>
-                        <a href="mailto:info@edenitude.com?subject=Rendez-vous Massage Thaï&body=Bonjour, je souhaiterais prendre rendez-vous pour un massage thaï. Merci de me contacter." class="btn btn-outline-primary btn-sm" aria-label="Réserver Massage Thaï">Réserver</a>
                     </div>
                 </div>
             </div>

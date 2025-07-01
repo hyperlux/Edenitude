@@ -132,6 +132,7 @@ jQuery(document).ready(function($) {
 
 
 	var siteCarousel = function () {
+		// Initialize owl carousel for testimonials and other carousels (not services)
 		if ( $('.owl-carousel-2').length > 0 ) {
 			$('.owl-carousel-2').owlCarousel({
 		    center: false,
@@ -144,18 +145,15 @@ jQuery(document).ready(function($) {
 				navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
 		    responsive:{
 	        600:{
-	        	
 	        	nav: true,
 	          items: 1
 	        },
 	        1000:{
-	        	
 	        	stagePadding: 0,
 	        	nav: true,
 	          items: 2
 	        },
 	        1200:{
-	        	
 	        	stagePadding: 0,
 	        	nav: true,
 	          items: 2
@@ -163,47 +161,24 @@ jQuery(document).ready(function($) {
 		    }
 			});
 		}
-		$('.row.owl-carousel.owl-theme').owlCarousel({
+
+		// Services are now handled by CSS Grid - no owl carousel needed
+
+		// Initialize slide-one-item carousel
+		if ( $('.slide-one-item').length > 0 ) {
+			$('.slide-one-item').owlCarousel({
 		    center: false,
 		    items: 1,
 		    loop: true,
 				stagePadding: 0,
-		    margin: 30,
-		    autoplay: true,
+		    margin: 0,
 		    smartSpeed: 1000,
+		    autoplay: true,
+		    pauseOnHover: false,
 		    nav: true,
-				navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
-		    responsive:{
-	        600:{
-	        	
-	        	nav: true,
-	          items: 1
-	        },
-	        1000:{
-	        	
-	        	nav: true,
-	          items: 2
-	        },
-	        1200:{
-	        	
-	        	nav: true,
-	          items: 3
-	        }
-		    }
-		});
-
-		$('.slide-one-item').owlCarousel({
-	    center: false,
-	    items: 1,
-	    loop: true,
-			stagePadding: 0,
-	    margin: 0,
-	    smartSpeed: 1000,
-	    autoplay: true,
-	    pauseOnHover: false,
-	    nav: true,
-	    navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">']
-	  });
+		    navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">']
+		  });
+		}
 	};
 	siteCarousel();
 
@@ -451,4 +426,70 @@ Ce message a été envoyé depuis le formulaire de contact du site Edenitude.`;
 		);
 	};
 	serviceInteractions();
+});
+// Enhanced smooth scroll for hero CTA
+$(document).ready(function() {
+    // Smooth scroll enhancement for hero CTA
+    $('.hero-cta').on('click', function(e) {
+        e.preventDefault();
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top - 100
+            }, 1000, 'easeInOutCubic');
+        }
+    });
+
+    // Grid item entrance animations with intersection observer
+    if ('IntersectionObserver' in window) {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all grid items
+        document.querySelectorAll('.grid-item').forEach(function(item) {
+            observer.observe(item);
+        });
+    } else {
+        // Fallback for browsers without IntersectionObserver
+        $('.grid-item').addClass('animate-in');
+    }
+
+    // Enhanced floating animation for decorative images
+    function enhanceFloatingAnimation() {
+        $('.decorative-image.floating').each(function(index) {
+            var delay = index * 1000; // Stagger the animations
+            $(this).css('animation-delay', delay + 'ms');
+        });
+    }
+
+    enhanceFloatingAnimation();
+
+    // Parallax effect for decorative elements on scroll
+    $(window).on('scroll', function() {
+        var scrolled = $(window).scrollTop();
+        var parallax = scrolled * 0.1;
+        
+        $('.decorative-image').css('transform', 'translateY(' + parallax + 'px)');
+    });
+
+    // Enhanced hover effects for service cards
+    $('.service-card').hover(
+        function() {
+            $(this).find('img').addClass('hover-scale');
+        },
+        function() {
+            $(this).find('img').removeClass('hover-scale');
+        }
+    );
 });

@@ -425,6 +425,421 @@ h1, h2, h3, h4, h5,
   color: #666 !important;
 }
 
+/* ================================
+   HERO SECTION ENHANCEMENTS
+   ================================ */
+
+.hero-logo {
+  transition: transform 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.hero-cta {
+  position: relative;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.hero-arrow {
+  margin-left: 0.5rem;
+  animation: bounce-arrow 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes bounce-arrow {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-3px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+}
+
+/* Enhanced arrow with pulsing effect */
+.hero-cta:hover .hero-arrow {
+  animation: bounce-arrow-intense 1s ease-in-out infinite;
+}
+
+@keyframes bounce-arrow-intense {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* ================================
+   SERVICES GRID LAYOUT
+   ================================ */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.grid-item {
+  position: relative;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Service Cards */
+.service-card {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.service-content {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-content img {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+}
+
+.service-card:hover .service-content img {
+  transform: scale(1.05);
+}
+
+.service-content .heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.service-content p {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.service-content .btn {
+  margin-top: auto;
+  border-radius: 25px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.service-content .btn:hover {
+  background-color: #D4AF37;
+  border-color: #D4AF37;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Decorative Items */
+.decorative-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(212, 175, 55, 0.1));
+  border: 2px dashed rgba(212, 175, 55, 0.2);
+  border-radius: 15px;
+  min-height: 350px;
+}
+
+.decorative-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.decorative-image {
+  max-width: 80%;
+  max-height: 80%;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.decorative-image.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.decorative-item:hover .decorative-image {
+  opacity: 0.9;
+  transform: scale(1.1) translateY(-5px);
+}
+
+/* ================================
+   RESPONSIVE GRID BREAKPOINTS
+   ================================ */
+
+/* Large tablets and small desktops */
+@media (max-width: 1199px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    max-width: 800px;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .decorative-item {
+    min-height: 300px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+  .services-grid {
+    grid-gap: 1.5rem;
+  }
+  
+  .service-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 767px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  
+  .service-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .service-content img {
+    height: 180px;
+  }
+  
+  .decorative-item {
+    min-height: 200px;
+    margin: 1rem 0;
+  }
+  
+  .decorative-image {
+    max-width: 60%;
+    max-height: 60%;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+
+/* ================================
+   JAVASCRIPT-TRIGGERED ANIMATIONS
+   ================================ */
+
+/* Grid item entrance animation */
+.grid-item.animate-in {
+  animation: slideInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Enhanced hover scale effect for images */
+.service-content img.hover-scale {
+  transform: scale(1.08) !important;
+  filter: brightness(1.1);
+}
+
+/* Smooth transitions for all interactive elements */
+.grid-item,
+.service-content img,
+.decorative-image {
+  will-change: transform;
+}
+
+/* Enhanced parallax support */
+.decorative-image {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Performance optimization for animations */
+@media (prefers-reduced-motion: no-preference) {
+  .grid-item {
+    animation-duration: 0.8s;
+  }
+  
+  .decorative-image.floating {
+    animation-duration: 6s;
+  }
+}
+
+/* Focus trap improvements for grid navigation */
+.services-grid:focus-within .grid-item:not(:focus-within) {
+  opacity: 0.7;
+}
+
+.grid-item:focus-within {
+  z-index: 10;
+  transform: translateY(-5px) scale(1.02);
+}
+  }
+  
+  .hero-cta {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .grid-item {
+    border-radius: 10px;
+  }
+  
+  .service-content {
+    padding: 1rem;
+  }
+  
+  .service-content .heading {
+    font-size: 1.3rem;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ================================
+   ENHANCED ANIMATIONS
+   ================================ */
+
+/* Staggered entrance animations */
+.grid-item {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Remove owl carousel specific styles for services */
+.ftco-section.ftco-services .owl-item .text-center {
+  background-color: transparent !important;
+}
+
+.row.owl-carousel {
+  background-color: transparent !important;
+}
+
+/* Enhanced focus states for grid items */
+.service-card:focus-within {
+  outline: 3px solid #D4AF37;
+  outline-offset: 2px;
+}
+
+/* Improved service benefits styling */
+.service-benefits {
+  background: rgba(212, 175, 55, 0.05);
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-style: normal;
+  border-left: 3px solid #D4AF37;
+}
+
+.service-benefits small {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Enhanced service price styling */
+.service-price {
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #D4AF37, #B8941F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(212, 175, 55, 0.1);
+}
+
 /* Testimonials Section */
 .testimonials-section {
   background-color: beige !important;
