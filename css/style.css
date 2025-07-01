@@ -198,7 +198,7 @@ h1, h2, h3, h4, h5,
 }
 
 .btn {
-  border-radius: 0;
+  border-radius: 25px;
   font-size: 14px;
   text-decoration: none !important;
   padding-top: 18px;
@@ -387,6 +387,7 @@ h1, h2, h3, h4, h5,
   font-size: 1.1rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  border-radius: 25px;
 }
 
 .btn-booking-cta:hover {
@@ -2549,31 +2550,20 @@ h1, h2, h3, h4, h5,
 
 /*# sourceMappingURL=style.css.map */
 .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 15%;
-  transform: translateY(-50%);
-  z-index: 10;
+  position: relative;
   color: #000; /* Ensure text is black */
-  text-align: left;
+  text-align: center;
+  margin-top: 1rem;
 }
 
-.hero-text h2 {
+.hero-text h1 {
   font-size: 3rem; /* Adjust font size as needed */
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 @media (max-width: 991.98px) {
-  .hero-text {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  .hero-text h2 {
+  .hero-text h1 {
     font-size: 2rem;
   }
 }
@@ -2624,4 +2614,33 @@ h1, h2, h3, h4, h5,
 }
 .ftco-section.ftco-services .owl-item .text-center {
     background-color: beige !important;
+}
+.fs-2 {
+  font-size: 1.5rem !important; /* Adjust this value as needed */
+}
+.testimonials-full-width .container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.testimonials-full-width .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Ensure the col-12 inside the row also takes full width */
+.testimonials-full-width .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.services-full-width .container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.services-full-width .row {
+    margin-left: 0;
+    margin-right: 0;
 }

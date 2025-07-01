@@ -170,6 +170,7 @@ jQuery(document).ready(function($) {
 				stagePadding: 0,
 		    margin: 30,
 		    autoplay: true,
+		    smartSpeed: 1000,
 		    nav: true,
 				navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
 		    responsive:{
