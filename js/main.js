@@ -5,6 +5,18 @@
  });
  console.log("AOS initialized!");
 
+// Header scroll behavior
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    var navbar = $('.site-navbar');
+    
+    if (scroll >= 100) {
+        navbar.addClass('scrolled');
+    } else {
+        navbar.removeClass('scrolled');
+    }
+});
+
 jQuery(document).ready(function($) {
 
 	"use strict";

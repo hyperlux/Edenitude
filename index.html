@@ -63,15 +63,12 @@
     <header class="site-navbar" role="banner">
 
       <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center justify-content-center">
           
-          <div class="col-11 col-xl-4">
-            <h1 class="mb-0 site-logo"><a href="index.html" class="text-white mb-0">Edenitude<span class="text-primary">.</span> </a></h1>
-          </div>
-          <div class="col-12 col-md-8 d-none d-xl-block">
-            <nav class="site-navigation position-relative text-right" role="navigation">
-
-              <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+          <div class="col-12 text-center">
+            <h1 class="mb-0 site-logo"><a href="index.html" class="text-white mb-0"></a></h1>
+            <nav class="site-navigation position-relative d-none d-xl-block" role="navigation">
+              <ul class="site-menu js-clone-nav mx-auto">
                 <li class="active"><a href="index.html"><span>Accueil</span></a></li>
                 <li class="has-children">
                   <a href="services.html"><span>Nos Services</span></a>
@@ -112,20 +109,31 @@
 
 
     <main id="main-content" role="main">
-      <div class="site-blocks-cover overlay" style="background-color: transparent; padding-top: 100px;" data-stellar-background-ratio="0.5">
+      <div class="site-blocks-cover overlay" style="background-color: transparent;" data-stellar-background-ratio="0.5">
         <div class="container">
-          <div class="row align-items-center justify-content-center text-center">
-
-            <div class="col-md-8 text-center">
-              <img src="images/logo.png" alt="Logo Edenitude" class="img-fluid mb-4 mt-5 hero-logo" loading="lazy">
-              <div class="hero-text">
-                <h1 class="text-black hero-title">La voie vers votre bien-être</h1>
-                <p class="lead text-black mb-5 hero-subtitle">Thérapies alternatives & préventives</p>
-                <a href="#services" class="btn btn-primary btn-booking-cta hero-cta" aria-label="Voir nos services">
-                  <span>Voir nos services</span>
-                  <i class="icon-arrow-down hero-arrow" aria-hidden="true"></i>
-                </a>
+          <div class="hero-container">
+            <div class="row justify-content-center text-center position-relative">
+              <div class="col-md-8 text-center">
+                <img src="images/logo.png" alt="Logo Edenitude" class="img-fluid hero-logo" loading="lazy">
+                <div class="hero-text">
+                  <h1 class="text-black hero-title">La voie vers votre bien-être</h1>
+                  <p class="lead text-black hero-subtitle">Thérapies alternatives & préventives</p>
+                  <a href="#services" class="btn btn-primary btn-booking-cta hero-cta" aria-label="Voir nos services">
+                    <span>Voir nos services</span>
+                    <i class="icon-arrow-down hero-arrow" aria-hidden="true"></i>
+                  </a>
+                </div>
               </div>
+            
+            <!-- Decorative Image Positioned Absolutely - Right Side -->
+            <div class="hero-decorative-positioned d-none d-md-block">
+              <img src="images/selected/2.png" alt="Élément décoratif bien-être" class="img-fluid hero-decorative-image" loading="lazy">
+            </div>
+            
+            <!-- Decorative Image Positioned Absolutely - Bottom Left -->
+            <div class="hero-decorative-left d-none d-md-block">
+              <img src="images/massageart.png" alt="Art décoratif massage" class="img-fluid hero-decorative-image-left" loading="lazy">
+            </div>
             </div>
           </div>
         </div>
@@ -136,12 +144,10 @@
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-8 text-center">
-                    <h2 class="site-section-heading text-center">Nos Services</h2>
-                    <p class="lead">Découvrez notre gamme complète de thérapies holistiques</p>
                 </div>
             </div>
             <div class="services-grid" role="region" aria-label="Grille des services">
-                <!-- Grid Row 1: Thai Massage, Decorative Image 1, Massage aux huiles -->
+                <!-- Row 1: Thai Massage, Massage aux huiles, Soins énergétiques, Massage des pieds -->
                 <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-content">
                         <img src="images/massagethai.jpg" alt="Thaï massage - Des techniques douces pour soulager vos douleurs" class="img-fluid mb-4" loading="lazy">
@@ -155,13 +161,7 @@
                     </div>
                 </div>
 
-                <div class="grid-item decorative-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="decorative-content">
-                        <img src="images/selected/1.png" alt="Élément décoratif" class="decorative-image floating" loading="lazy">
-                    </div>
-                </div>
-
-                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-content">
                         <img src="images/massagehuile.jpg" alt="Massage aux huiles thérapeutiques - relaxation profonde et travail des fascias" class="img-fluid mb-4" loading="lazy">
                         <h3 class="heading">Massages aux huiles</h3>
@@ -174,14 +174,7 @@
                     </div>
                 </div>
 
-                <!-- Grid Row 2: Decorative Image 2, Soins énergétiques, Massage des pieds -->
-                <div class="grid-item decorative-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="decorative-content">
-                        <img src="images/selected/2.png" alt="Élément décoratif" class="decorative-image floating" loading="lazy">
-                    </div>
-                </div>
-
-                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-content">
                         <img src="images/reequilibrage.jpg" alt="Soins énergétiques et rééquilibrage - harmonisation des énergies vitales pour le bien-être global" class="img-fluid mb-4" loading="lazy">
                         <h3 class="heading">Soins énergétiques</h3>
@@ -194,7 +187,7 @@
                     </div>
                 </div>
 
-                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-content">
                         <img src="images/foot_massage.jpg" alt="Massage des pieds thérapeutique - libération subtile et amélioration de la circulation" class="img-fluid mb-4" loading="lazy">
                         <h3 class="heading">Massage des pieds</h3>
@@ -207,8 +200,8 @@
                     </div>
                 </div>
 
-                <!-- Grid Row 3: Tok Sen, Decorative Image 7, Hot herbals -->
-                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="700">
+                <!-- Row 2: Tok Sen, Hot herbals, Amatarot, Massage Abdominal -->
+                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="500">
                     <div class="service-content">
                         <img src="images/toksen.jpg" alt="Tok Sen - technique ancestrale Lanna avec vibrations rythmiques pour libérer muscles et articulations" class="img-fluid mb-4" loading="lazy">
                         <h3 class="heading">Tok Sen</h3>
@@ -221,13 +214,7 @@
                     </div>
                 </div>
 
-                <div class="grid-item decorative-item" data-aos="fade-up" data-aos-delay="800">
-                    <div class="decorative-content">
-                        <img src="images/selected/7.png" alt="Élément décoratif" class="decorative-image floating" loading="lazy">
-                    </div>
-                </div>
-
-                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="900">
+                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="600">
                     <div class="service-content">
                         <img src="images/hotherbals.jpg" alt="Hot herbals - travail profond des sen lines pour rééquilibrer les flux énergétiques et sanguins" class="img-fluid mb-4" loading="lazy">
                         <h3 class="heading">Hot herbals</h3>
@@ -240,14 +227,7 @@
                     </div>
                 </div>
 
-                <!-- Grid Row 4: Decorative Body SVG, Amatarot, Massage Abdominal -->
-                <div class="grid-item decorative-item" data-aos="fade-up" data-aos-delay="1000">
-                    <div class="decorative-content">
-                        <img src="images/selected/body.svg" alt="Silhouette corporelle décorative" class="decorative-image floating" loading="lazy">
-                    </div>
-                </div>
-
-                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="1100">
+                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="700">
                     <div class="service-content">
                         <img src="images/amatarot.jpg" alt="Amatarot - technique ancestrale de médecine traditionnelle pour régénération des tissus et libération nerveuse" class="img-fluid mb-4" loading="lazy">
                         <h3 class="heading">Amatarot</h3>
@@ -260,7 +240,7 @@
                     </div>
                 </div>
 
-                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="1200">
+                <div class="grid-item service-card" data-aos="fade-up" data-aos-delay="800">
                     <div class="service-content">
                         <img src="images/massageabdo.jpg" alt="Massage Abdominal Wissin nuad tong boran - massage détoxifiant et énergisant pour équilibrer le système corporel" class="img-fluid mb-4" loading="lazy">
                         <h3 class="heading">Massage Abdominal</h3>
