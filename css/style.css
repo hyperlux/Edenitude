@@ -8,7 +8,7 @@ body {
   color: #4d4d4d;
   font-weight: 300;
   font-size: 1rem;
-  background-color: beige;
+  background-color: #fff;
 }
 
 /* ================================
@@ -227,7 +227,7 @@ h1, h2, h3, h4, h5,
 
 .btn.btn-black:hover {
   color: #000;
-  background-color: beige;
+  background-color: #fff;
 }
 
 .btn.btn-primary {
@@ -248,7 +248,7 @@ h1, h2, h3, h4, h5,
 }
 
 .btn.btn-outline-white:hover {
-  background: beige;
+  background: #fff;
   color: #D4AF37 !important;
 }
 
@@ -281,6 +281,7 @@ h1, h2, h3, h4, h5,
 
 .site-section {
   padding: 2.5em 0;
+  background: #fff;
 }
 
 @media (min-width: 768px) {
@@ -335,7 +336,7 @@ h1, h2, h3, h4, h5,
 
 .site-footer {
   padding: 4em 0;
-  background: beige; /* Changed background to match hero section */
+  background: #fff; /* Changed background to match hero section */
 }
 
 @media (min-width: 768px) {
@@ -550,7 +551,7 @@ h1, h2, h3, h4, h5,
 
 .grid-item {
   position: relative;
-  background: #FFFFF0; /* Lighter beige than index background */
+  background: #fff; /* Lighter beige than index background */
   border-radius: 15px;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -968,7 +969,7 @@ h1, h2, h3, h4, h5,
 
 /* Testimonials Section */
 .testimonials-section {
-  background-color: beige !important;
+  background-color: #fff !important;
 }
 
 /* Testimonials Continuous Slider */
@@ -1054,11 +1055,11 @@ h1, h2, h3, h4, h5,
 
 /* Contact Form */
 .contact-form-section {
-  background: beige;
+  background: #fff;
 }
 
 .contact-form {
-  background: beige;
+  background: #fff;
   padding: 3rem;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -1292,7 +1293,7 @@ h1, h2, h3, h4, h5,
   bottom: 0;
   z-index: 0;
   width: 100%;
-  background: beige;
+  background: #fff;
 }
 
 .bg-image > .container {
@@ -1550,7 +1551,7 @@ h1, h2, h3, h4, h5,
   padding: 0px 0;
   margin-top: 20px;
   margin-left: 0px;
-  background: beige;
+  background: #fff;
   -webkit-transition: 0.2s 0s;
   -o-transition: 0.2s 0s;
   transition: 0.2s 0s;
@@ -1657,7 +1658,7 @@ h1, h2, h3, h4, h5,
   right: 0;
   z-index: 2000;
   padding-top: 20px;
-  background: beige;
+  background: #fff;
   height: calc(100vh);
   -webkit-transform: translateX(110%);
   -ms-transform: translateX(110%);
@@ -1858,7 +1859,7 @@ h1, h2, h3, h4, h5,
   background-repeat: no-repeat;
   background-position: top;
   background-position: center center;
-  background-color: beige;
+  background-color: #fff;
   padding-top: 100px; /* Add padding to account for fixed header */
 }
 
@@ -1874,7 +1875,7 @@ h1, h2, h3, h4, h5,
   right: 0;
   top: 0;
   background: none;
-  background-color: beige !important; /* Ensure no blue overlay */
+  background-color: #fff !important; /* Ensure no blue overlay */
 }
 
 .site-blocks-cover .player {
@@ -1975,7 +1976,7 @@ h1, h2, h3, h4, h5,
 }
 
 .row.owl-carousel {
-  background-color: beige !important;
+  background-color: #fff !important;
 }
 
 
@@ -2195,7 +2196,7 @@ h1, h2, h3, h4, h5,
 .block-12 .text .text-inner {
   -webkit-box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.3);
-  background: beige;
+  background: #fff;
   padding: 10px;
   margin-right: 30px;
   position: relative;
@@ -2243,7 +2244,7 @@ h1, h2, h3, h4, h5,
   font-size: 20px;
   width: 70px;
   height: 70px;
-  background: beige;
+  background: #fff;
   display: block;
   border-radius: 50%;
   opacity: 1;
@@ -2705,7 +2706,7 @@ h1, h2, h3, h4, h5,
 }
 
 .form-search-wrap {
-  background: beige;
+  background: #fff;
   padding: 30px !important;
   -webkit-box-shadow: 0 2px 30px -5px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 30px -5px rgba(0, 0, 0, 0.2);
@@ -2734,7 +2735,7 @@ h1, h2, h3, h4, h5,
 }
 
 .popular-category {
-  background: beige;
+  background: #fff;
   display: block;
   text-align: center;
   padding: 30px 10px;
@@ -2951,7 +2952,7 @@ h1, h2, h3, h4, h5,
 
 .block-quick-info-2 {
   padding: 2rem 0;
-  background: beige; /* Changed background to match hero section */
+  background: #fff; /* Changed background to match hero section */
   margin-top: 5em; /* Added to create space between sections */
 }
 
@@ -2959,7 +2960,7 @@ h1, h2, h3, h4, h5,
   position: relative;
   z-index: 2;
   padding: 30px;
-  background: beige;
+  background: #fff;
   margin-top: -80px;
   -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
@@ -3223,7 +3224,7 @@ h1, h2, h3, h4, h5,
 /* Services Section */
 .ftco-services {
     overflow: hidden; /* Hide overflowing content during animation */
-    background-color: beige !important; /* Ensure no blue overlay */
+    background-color: #fff !important; /* Ensure no blue overlay */
 }
 
 .ftco-services .container {
@@ -3235,7 +3236,7 @@ h1, h2, h3, h4, h5,
     flex: 0 0 auto; /* Prevent shrinking and allow content to define width */
     width: 33.33%; /* Explicitly set width to ensure 3 items per row */
     margin-right: 0; /* Remove margin */
-    background: beige;
+    background: #fff;
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.1);
@@ -3255,10 +3256,10 @@ h1, h2, h3, h4, h5,
   border-radius: 10px;
 }
 .ftco-section.ftco-services {
-    background-color: beige;
+    background-color: #fff;
 }
 .ftco-section.ftco-services .owl-item .text-center {
-    background-color: beige !important;
+    background-color: #fff !important;
 }
 .fs-2 {
   font-size: 1.5rem !important; /* Adjust this value as needed */
